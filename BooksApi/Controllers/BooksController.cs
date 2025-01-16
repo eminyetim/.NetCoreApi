@@ -3,32 +3,26 @@ using BooksApi.Data.Context;
 using BooksApi.Dto.BookDto;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WebApi.Services.Abstract;
 
 namespace BooksApi.Controller
 {
     [ApiController]
-    [Route("api/controller")]
+    [Route("api/[controller]")]
     public class BooksController : ControllerBase
     {
-        private readonly AppDbContext _context;
-        private readonly IMapper _mapper;
+        private readonly IBookService _bookService;
 
-        public BooksController(IMapper mapper, AppDbContext context)
+        public BooksController(IBookService bookService)
         {
-            _mapper = mapper;
-            _context = context;
+            _bookService = bookService;
         }
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SelectBookDto>>> GetBooks()
         {
-            var books = await _context.Books
-            .Include(b => b.Genres)
-            .Include(b => b.Writers)
-            .ToListAsync();
-
-            var selectBook = _mapper.Map<IEnumerable<SelectBookDto>>(books);
-            return Ok(selectBook);
+            var books = await _bookService.GetAllBooksAsync();
+            return Ok(books);
         }
     }
 }

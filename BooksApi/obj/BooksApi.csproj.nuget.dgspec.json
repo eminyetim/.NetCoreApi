@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eminy\\OneDrive\\Masaüstü\\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\\Patika\\Books\\booksapi\\BooksApi\\BooksApi.csproj": {}
+    "C:\\Users\\eminy\\OneDrive\\Masaüstü\\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\\Patika\\Books\\BooksApi\\BooksApi\\BooksApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eminy\\OneDrive\\Masaüstü\\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\\Patika\\Books\\booksapi\\BooksApi\\BooksApi.csproj": {
+    "C:\\Users\\eminy\\OneDrive\\Masaüstü\\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\\Patika\\Books\\BooksApi\\BooksApi\\BooksApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eminy\\OneDrive\\Masaüstü\\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\\Patika\\Books\\booksapi\\BooksApi\\BooksApi.csproj",
+        "projectUniqueName": "C:\\Users\\eminy\\OneDrive\\Masaüstü\\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\\Patika\\Books\\BooksApi\\BooksApi\\BooksApi.csproj",
         "projectName": "BooksApi",
-        "projectPath": "C:\\Users\\eminy\\OneDrive\\Masaüstü\\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\\Patika\\Books\\booksapi\\BooksApi\\BooksApi.csproj",
+        "projectPath": "C:\\Users\\eminy\\OneDrive\\Masaüstü\\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\\Patika\\Books\\BooksApi\\BooksApi\\BooksApi.csproj",
         "packagesPath": "C:\\Users\\eminy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eminy\\OneDrive\\Masaüstü\\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\\Patika\\Books\\booksapi\\BooksApi\\obj\\",
+        "outputPath": "C:\\Users\\eminy\\OneDrive\\Masaüstü\\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\\Patika\\Books\\BooksApi\\BooksApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

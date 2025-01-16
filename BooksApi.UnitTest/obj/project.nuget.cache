@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JMk8I2Sb/rI=",
+  "dgSpecHash": "JDaewA0loSM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\eminy\\OneDrive\\Masaüstü\\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\\Patika\\Books\\booksapi\\BooksApi.UnitTest\\BooksApi.UnitTest.csproj",
+  "projectFilePath": "C:\\Users\\eminy\\OneDrive\\Masaüstü\\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\\Patika\\Books\\BooksApi\\BooksApi.UnitTest\\BooksApi.UnitTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\eminy\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\eminy\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

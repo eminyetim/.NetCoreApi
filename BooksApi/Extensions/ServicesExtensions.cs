@@ -1,6 +1,8 @@
 using FluentValidation;
 using WebApi.Dto.WriterDto;
 using WebApi.FluentValidationApi.Book;
+using WebApi.Services.Abstract;
+using WebApi.Services.Concrete;
 
 namespace BooksApi.Extensions
 {
@@ -8,7 +10,9 @@ namespace BooksApi.Extensions
     {
         public static void AddServicesExtension(this IServiceCollection services)
         {
-           services.AddTransient<IValidator<CreateWriterDto>, FluentCreateWriter>();
+            services.AddScoped<IBookService, BookService>();
+            services.AddScoped<IWirterService,WriterService>();
+            services.AddTransient<IValidator<CreateWriterDto>, FluentCreateWriter>();
         }
     }
 }
