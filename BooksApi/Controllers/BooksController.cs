@@ -26,7 +26,7 @@ namespace BooksApi.Controller
         {
             try
             {
-                var book = await _bookService.CreateBookDto(createBookDto);
+                var book = await _bookService.CreateBookAsyn(createBookDto);
                 return book;
             }
             catch (Exception ex)

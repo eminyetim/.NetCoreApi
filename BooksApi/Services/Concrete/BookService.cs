@@ -17,7 +17,7 @@ namespace WebApi.Services.Concrete
         private readonly IMapper _mapper;
         private readonly IValidator<CreateBookDto> _validator;
 
-        public BookService(IAppDbContext context, IMapper mapper, IValidator<CreateBookDto> validator)
+        public BookService(IAppDbContext context, IMapper mapper, IValidator<CreateBookDto> validator = null)
         {
             _context = context;
             _mapper = mapper;
@@ -34,11 +34,20 @@ namespace WebApi.Services.Concrete
             return _mapper.Map<IEnumerable<SelectBookDto>>(books);
         }
 
-        public async Task<CreateBookDto> CreateBookDto(CreateBookDto createBookDto)
+        public async Task<CreateBookDto> CreateBookAsyn(CreateBookDto createBookDto)
         {
             var validator = _validator.Validate(createBookDto);
             if (!validator.IsValid)
                 throw new Exception($"Doğrulama hatası:{validator.Errors}");
+
+            // >>> Burada aynı title'ın veritabanında var olup olmadığını kontrol ediyoruz. <<<
+            var existingBook = await _context.Books
+                .Where(b => b.Title == createBookDto.Title)
+                .FirstOrDefaultAsync();
+
+            if (existingBook != null)
+                throw new InvalidOperationException("Kitap zaten mevcut.");
+
 
             // 2. Manually create a new Book (or use AutoMapper for part of this)
             var book = new Book
@@ -65,6 +74,7 @@ namespace WebApi.Services.Concrete
             await _context.SaveChangesAsync();
             return createBookDto;
         }
+
         public async Task<bool> DeleteWriteAsync(int id)
         {
             // 1. Adım: Kitabı, Writers ve Genres tablolarıyla birlikte çekelim
@@ -91,8 +101,6 @@ namespace WebApi.Services.Concrete
             await _context.SaveChangesAsync();
             return true;
         }
-
-
 
         public async Task<SelectBookDto> GetByIdBookAsync(int id)
         {

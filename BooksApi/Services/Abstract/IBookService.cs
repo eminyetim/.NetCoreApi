@@ -7,7 +7,7 @@ namespace WebApi.Services.Abstract
     {
         Task<IEnumerable<SelectBookDto>> GetAllBooksAsync();
         Task<SelectBookDto> GetByIdBookAsync(int id);
-        Task<CreateBookDto> CreateBookDto(CreateBookDto createBookDto);
+        Task<CreateBookDto> CreateBookAsyn(CreateBookDto createBookDto);
         Task<UpdateBookDto> UpdateBookDto(UpdateBookDto updateBookDto);
         Task<bool> DeleteWriteAsync(int id);
     }
