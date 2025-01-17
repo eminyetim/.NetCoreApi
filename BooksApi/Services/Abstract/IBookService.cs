@@ -1,4 +1,5 @@
 using BooksApi.Dto.BookDto;
+using BooksApi.Models;
 
 namespace WebApi.Services.Abstract
 {
@@ -6,8 +7,8 @@ namespace WebApi.Services.Abstract
     {
         Task<IEnumerable<SelectBookDto>> GetAllBooksAsync();
         Task<SelectBookDto> GetByIdBookAsync(int id);
-        Task<IEnumerable<CreateBookDto>> CreateBookDto(CreateBookDto createBookDto);
-        Task<SelectBookDto> UpdateBookDto(UpdateBookDto updateBookDto);
+        Task<CreateBookDto> CreateBookDto(CreateBookDto createBookDto);
+        Task<UpdateBookDto> UpdateBookDto(UpdateBookDto updateBookDto);
         Task<bool> DeleteWriteAsync(int id);
     }
 }

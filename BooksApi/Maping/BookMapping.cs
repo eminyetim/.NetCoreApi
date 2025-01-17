@@ -24,8 +24,8 @@ namespace BooksApi.Mapping
             CreateMap<Writer, SelectWriterDto>();
 
             // DTO -> Entity
-            CreateMap<CreateBookDto, Book>();
-            CreateMap<UpdateBookDto, Book>();
+            CreateMap<CreateBookDto, Book>().ReverseMap();
+            CreateMap<UpdateBookDto, Book>().ReverseMap();
         }
     }
 }
