@@ -7,6 +7,7 @@ using FluentValidation;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WebApi.Data.Abstract;
 using WebApi.Dto.WriterDto;
 using WebApi.Services.Abstract;
 
@@ -14,11 +15,11 @@ namespace WebApi.Services.Concrete
 {
     public class WriterService : IWirterService
     {
-        private readonly AppDbContext _context;
+        private readonly IAppDbContext _context;
         private readonly IMapper _mapper;
         private readonly IValidator<CreateWriterDto> _validator;
 
-        public WriterService(AppDbContext context, IMapper mapper, IValidator<CreateWriterDto> validator)
+        public WriterService(IAppDbContext context, IMapper mapper, IValidator<CreateWriterDto> validator)
         {
             _context = context;
             _mapper = mapper;

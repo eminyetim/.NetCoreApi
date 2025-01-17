@@ -1,5 +1,7 @@
+using BooksApi.Data.Context;
 using BooksApi.Dto.BookDto;
 using FluentValidation;
+using WebApi.Data.Abstract;
 using WebApi.Dto.WriterDto;
 using WebApi.FluentValidationApi.Book;
 using WebApi.FluentValidationApi.Writer;
@@ -18,6 +20,8 @@ namespace BooksApi.Extensions
 
             services.AddTransient<IValidator<CreateWriterDto>, FluentCreateWriter>();
             services.AddTransient<IValidator<CreateBookDto>,FluentCreateBook>();
+
+            services.AddScoped<IAppDbContext, AppDbContext>();
         }
     }
 }

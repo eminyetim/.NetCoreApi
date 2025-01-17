@@ -6,15 +6,24 @@ using FluentValidation;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WebApi.Data.Abstract;
 using WebApi.Services.Abstract;
 
 namespace WebApi.Services.Concrete
 {
     public class BookService : IBookService
     {
-        private readonly AppDbContext _context;
+        private readonly IAppDbContext _context;
         private readonly IMapper _mapper;
         private readonly IValidator<CreateBookDto> _validator;
+
+        public BookService(IAppDbContext context, IMapper mapper, IValidator<CreateBookDto> validator)
+        {
+            _context = context;
+            _mapper = mapper;
+            _validator = validator;
+        }
+
         public async Task<IEnumerable<SelectBookDto>> GetAllBooksAsync()
         {
             var books = await _context.Books
@@ -23,12 +32,6 @@ namespace WebApi.Services.Concrete
                 .ToListAsync();
 
             return _mapper.Map<IEnumerable<SelectBookDto>>(books);
-        }
-        public BookService(AppDbContext context, IMapper mapper, IValidator<CreateBookDto> validator)
-        {
-            _context = context;
-            _mapper = mapper;
-            _validator = validator;
         }
 
         public async Task<CreateBookDto> CreateBookDto(CreateBookDto createBookDto)
@@ -89,24 +92,24 @@ namespace WebApi.Services.Concrete
             return true;
         }
 
-       
-       
+
+
         public async Task<SelectBookDto> GetByIdBookAsync(int id)
         {
-           var book = await _context.Books.FindAsync(id);
-            if(book == null)
+            var book = await _context.Books.FindAsync(id);
+            if (book == null)
                 throw new Exception("Book is could not be find !");
             return _mapper.Map<SelectBookDto>(book);
         }
 
 
-      
+
         public async Task<UpdateBookDto> UpdateBookDto(UpdateBookDto updateBookDto)
         {
             var book = await _context.Books.FindAsync(updateBookDto.Id);
-            if(book == null)
+            if (book == null)
                 throw new Exception("Book is could not be find!");
-            _mapper.Map(updateBookDto,book);
+            _mapper.Map(updateBookDto, book);
             _context.Books.Update(book);
             await _context.SaveChangesAsync();
             var selectBook = _mapper.Map<UpdateBookDto>(book);
