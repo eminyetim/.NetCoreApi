@@ -17,9 +17,11 @@ C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Pa
 C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\bin\Debug\net8.0\Azure.Core.dll
 C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\bin\Debug\net8.0\Azure.Identity.dll
+C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\bin\Debug\net8.0\BCrypt.Net-Next.dll
 C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\bin\Debug\net8.0\Castle.Core.dll
 C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\bin\Debug\net8.0\FluentAssertions.dll
 C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\bin\Debug\net8.0\FluentValidation.dll
+C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\bin\Debug\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
@@ -171,5 +173,3 @@ C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Pa
 C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\obj\Debug\net8.0\BooksApi.UnitTest.pdb
 C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\obj\Debug\net8.0\BooksApi.UnitTest.genruntimeconfig.cache
 C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\obj\Debug\net8.0\ref\BooksApi.UnitTest.dll
-C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\bin\Debug\net8.0\BCrypt.Net-Next.dll
-C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

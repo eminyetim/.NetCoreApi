@@ -1,3 +1,4 @@
+using System.IO.Compression;
 using System.Reflection;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -14,31 +15,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 
+
 builder.Services.AddControllers();
 builder.Services.AddServicesExtension();
 
-
-builder.Services.AddAuthentication(options =>
-       {
-           options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-           options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-       })
-       .AddJwtBearer(options =>
-       {
-           options.TokenValidationParameters = new TokenValidationParameters
-           {
-               ValidateIssuer = true,
-               ValidateAudience = true,
-               ValidateLifetime = true,
-               ValidateIssuerSigningKey = true,
-               ValidIssuer = "Token:Issure", // Değiştirin
-               ValidAudience = "Token:Audience",  // Değiştirin
-               IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("Token:SecurityKey")), // Değiştirin
-               ClockSkew = TimeSpan.Zero // Sunucu bilgisayar ile zamanı ayarlar.
-           };
-       });
-
-
+// JWT Authentication yapılandırması
+builder.Services.AddJwtAuthentication(builder.Configuration);
 builder.Services.AddAuthorization();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -1,9 +1,11 @@
 using BooksApi.Dto.CompanyDto;
 using BooksApi.Services.Abstract;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BooksApi.Controller
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class CompaniesController : ControllerBase

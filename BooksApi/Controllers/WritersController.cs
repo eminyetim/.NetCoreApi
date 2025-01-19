@@ -1,9 +1,11 @@
 using BooksApi.Dto.WriterDto;
 using Microsoft.AspNetCore.Mvc;
 using BooksApi.Services.Abstract;
+using Microsoft.AspNetCore.Authorization;
 
 namespace WebApi.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class WritersController : ControllerBase

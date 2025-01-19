@@ -12,21 +12,29 @@ namespace BooksApi.Services.Concrete
         private readonly IAppDbContext _context;
         private readonly IMapper _mapper;
 
-        public UserService(IAppDbContext context, IMapper mapper)
+        readonly IConfiguration _configuration; 
+
+        public UserService(IAppDbContext context, IMapper mapper, IConfiguration configuration)
         {
             _context = context;
             _mapper = mapper;
+            _configuration = configuration;
         }
 
         public async Task<CreateUserDto> CreateUserAsyn(CreateUserDto createUserDto)
         {
             try
             {
+                var userEmail = _context.Users.SingleOrDefaultAsync(x=> x.Email == createUserDto.Email);
+                if(userEmail is not null)
+                {
+                    throw new Exception("The user is registered.");
+                }
                 // Şirketin varlığını kontrol et
                 var company = await _context.Companies.FindAsync(createUserDto.CompanyId);
                 if (company == null)
                 {
-                    throw new Exception("Şirket bulunamadı.");
+                    throw new Exception("The company could not find.");
                 }
 
                 // Kullanıcıyı DTO'dan User modeline map et

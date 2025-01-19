@@ -1,9 +1,11 @@
 using BooksApi.Dto.BookDto;
 using Microsoft.AspNetCore.Mvc;
 using BooksApi.Services.Abstract;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BooksApi.Controller
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class BooksController : ControllerBase

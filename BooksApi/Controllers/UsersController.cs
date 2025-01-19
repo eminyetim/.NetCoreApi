@@ -1,4 +1,6 @@
+using System.Threading.Tasks;
 using BooksApi.Dto.UserDto;
+using BooksApi.Models;
 using BooksApi.Services.Abstract;
 using BooksApi.Services.Concrete;
 using Microsoft.AspNetCore.Mvc;
@@ -10,10 +12,12 @@ namespace BooksApi.Controller
     public class UsersController : ControllerBase
     {
         private readonly IUserService _service;
+        private readonly ILoginService _serviceLogin;
 
-        public UsersController(IUserService service)
+        public UsersController(IUserService service, ILoginService serviceToken)
         {
             _service = service;
+            _serviceLogin = serviceToken;
         }
 
         [HttpGet]
@@ -30,6 +34,18 @@ namespace BooksApi.Controller
             {
                 var createWriter = await _service.CreateUserAsyn(createWriterDto);
                 return Ok(createWriter);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+        [HttpPost("concreate/token")]
+        public ActionResult<Token> CreateToken(CreateTokenModel login)
+        {
+            try
+            {
+                return _serviceLogin.Login(login);
             }
             catch (Exception ex)
             {
