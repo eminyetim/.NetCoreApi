@@ -1,7 +1,7 @@
 using BooksApi.Dto.BookDto;
 using BooksApi.Models;
 
-namespace WebApi.Services.Abstract
+namespace BooksApi.Services.Abstract
 {
     public interface IBookService
     {

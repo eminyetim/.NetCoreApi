@@ -1,4 +1,4 @@
-namespace WebApi.Dto.WriterDto
+namespace BooksApi.Dto.WriterDto
 {
     public class UpdateWriterDto
     {

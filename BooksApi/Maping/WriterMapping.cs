@@ -1,7 +1,7 @@
 using AutoMapper;
 using BooksApi.Dto.WriterDto;
 using BooksApi.Models;
-using WebApi.Dto.WriterDto;
+
 
 namespace WebApi.Mapping
 {

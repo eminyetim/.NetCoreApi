@@ -1,7 +1,7 @@
 using BooksApi.Dto.WriterDto;
-using WebApi.Dto.WriterDto;
 
-namespace WebApi.Services.Abstract
+
+namespace BooksApi.Services.Abstract
 {
     public interface IWirterService 
     {

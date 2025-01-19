@@ -1,8 +1,8 @@
 using BooksApi.Dto.BookDto;
 using FluentValidation;
-using WebApi.Dto.WriterDto;
+using BooksApi.Dto.WriterDto;
 
-namespace WebApi.FluentValidationApi.Writer
+namespace BooksApi.FluentValidationApi.Writer
 {
     public class FluentCreateWriter : AbstractValidator<CreateWriterDto>
     {

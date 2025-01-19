@@ -1,13 +1,6 @@
-using AutoMapper;
-using BooksApi.Data.Context;
-using BooksApi.Dto.BookDto;
 using BooksApi.Dto.WriterDto;
-using BooksApi.Models;
-using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using WebApi.Dto.WriterDto;
-using WebApi.Services.Abstract;
+using BooksApi.Services.Abstract;
 
 namespace WebApi.Controllers
 {

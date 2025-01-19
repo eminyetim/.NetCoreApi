@@ -1,17 +1,12 @@
-using System.Runtime.CompilerServices;
 using AutoMapper;
-using BooksApi.Data.Context;
 using BooksApi.Dto.WriterDto;
 using BooksApi.Models;
 using FluentValidation;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApi.Data.Abstract;
-using WebApi.Dto.WriterDto;
-using WebApi.Services.Abstract;
+using BooksApi.Data.Abstract;
+using BooksApi.Services.Abstract;
 
-namespace WebApi.Services.Concrete
+namespace BooksApi.Services.Concrete
 {
     public class WriterService : IWirterService
     {

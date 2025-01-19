@@ -1,7 +1,7 @@
 using BooksApi.Models;
 using Microsoft.EntityFrameworkCore;
-using WebApi.Data.Abstract;
-using WebApi.Services.Abstract;
+using BooksApi.Data.Abstract;
+using BooksApi.Services.Abstract;
 
 namespace BooksApi.Data.Context
 {
@@ -14,6 +14,8 @@ namespace BooksApi.Data.Context
         public DbSet<Book> Books { get; set; }
         public DbSet<Writer> Writers { get; set; }
         public DbSet<Genre> Genres { get; set; }
+        public DbSet<Company> Companies { get; set; }
+        public DbSet<User> Users { get; set; }
 
         public async Task<int> SaveChangesAsync()
         {

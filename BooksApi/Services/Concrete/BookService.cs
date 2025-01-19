@@ -6,10 +6,10 @@ using FluentValidation;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using WebApi.Data.Abstract;
-using WebApi.Services.Abstract;
+using BooksApi.Data.Abstract;
+using BooksApi.Services.Abstract;
 
-namespace WebApi.Services.Concrete
+namespace BooksApi.Services.Concrete
 {
     public class BookService : IBookService
     {

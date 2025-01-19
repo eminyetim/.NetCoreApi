@@ -171,3 +171,5 @@ C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Pa
 C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\obj\Debug\net8.0\BooksApi.UnitTest.pdb
 C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\obj\Debug\net8.0\BooksApi.UnitTest.genruntimeconfig.cache
 C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\obj\Debug\net8.0\ref\BooksApi.UnitTest.dll
+C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\eminy\OneDrive\Masaüstü\BTK-Akademi-ASPNET-Core-MVC-Egitimi-master\Patika\Books\BooksApi\BooksApi.UnitTest\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

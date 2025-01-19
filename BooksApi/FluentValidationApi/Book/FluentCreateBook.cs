@@ -1,7 +1,7 @@
 using BooksApi.Dto.BookDto;
 using FluentValidation;
 
-namespace WebApi.FluentValidationApi.Book
+namespace BooksApis.FluentValidationApi.Book
 {
     public class FluentCreateBook : AbstractValidator<CreateBookDto>
     {
