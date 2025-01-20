@@ -13,6 +13,7 @@ namespace BooksApi.Controller
     {
         private readonly IUserService _service;
         private readonly ILoginService _serviceLogin;
+        private readonly IRefreshTokenService _serviceRefreshToken;
 
         public UsersController(IUserService service, ILoginService serviceToken)
         {
@@ -40,8 +41,9 @@ namespace BooksApi.Controller
                 return BadRequest(ex.Message);
             }
         }
+        
         [HttpPost("concreate/token")]
-        public ActionResult<Token> CreateToken(CreateTokenModel login)
+        public ActionResult<Token> CreateToken([FromBody] CreateTokenModel login)
         {
             try
             {
@@ -52,5 +54,11 @@ namespace BooksApi.Controller
                 return BadRequest(ex.Message);
             }
         }
-    }
+
+        [HttpPost("refreshToken")]
+        public ActionResult<Token> CreateRefreshToken([FromQuery] string token)
+        {
+            return _serviceRefreshToken.CreateAccessRefreshToken(token);
+        }
+    }    
 }

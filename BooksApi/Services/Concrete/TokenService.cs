@@ -30,7 +30,7 @@ namespace BooksApi.Services.Concrete
             token.Expiration = DateTime.Now.AddMinutes(15);
 
             JwtSecurityToken securityToken = new JwtSecurityToken(
-                issuer: Configuration["Token:Issuer"],
+                issuer: Configuration["Token:Issuer"], // Doğru issuer değeri
                 audience: Configuration["Token:Audience"],
                 expires: token.Expiration,
                 notBefore: DateTime.Now,

@@ -1,31 +1,26 @@
-using System.Threading.Tasks;
 using AutoMapper;
 using BooksApi.Data.Abstract;
 using BooksApi.Models;
 using BooksApi.Services.Abstract;
-using Microsoft.AspNetCore.Mvc;
 
 namespace BooksApi.Services.Concrete
 {
-    public class LoginService : ILoginService
+    public class RefreshToken : IRefreshTokenService
     {
         private readonly IAppDbContext _context;
-        private readonly IMapper _mapper;
-        private readonly IConfiguration _configuration;
-        private readonly ITokenService _tokenService;
+    
+        public ITokenService _tokenService;
+        public IConfiguration _configuration { get; set; }
 
-        public LoginService(IAppDbContext context, IMapper mapper, IConfiguration configuration, ITokenService tokenService)
+        public RefreshToken(IAppDbContext contex, IConfiguration Configuration)
         {
-            _context = context;
-            _mapper = mapper;
-            _configuration = configuration;
-            _tokenService = tokenService;
+            _context = contex;
+            _configuration = Configuration;
         }
 
-       
-        public Token Login(CreateTokenModel Model)
+        public Token CreateAccessRefreshToken(string RefreshToken)
         {
-            var user = _context.Users.FirstOrDefault(x => x.Email == Model.Email && x.PasswordHash == Model.PasswordHash);
+            var user = _context.Users.FirstOrDefault(x=> x.RefreshToken == RefreshToken && x.RefreshTokenExpireDate > DateTime.Now);
             if (user is not null)
             {
                 _tokenService.Configuration = _configuration;
@@ -38,6 +33,5 @@ namespace BooksApi.Services.Concrete
             else
                 throw new InvalidDataException("Email or Password is not valid.");
         }
-        
     }
 }
